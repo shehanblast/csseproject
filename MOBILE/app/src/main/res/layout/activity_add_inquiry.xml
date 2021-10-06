@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    tools:context=".AddInquiry">
+    <LinearLayout
+        android:id="@+id/order_specific_item"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/Order_name_in"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Order Name"/>
+
+        <TextView
+            android:id="@+id/supplier_name_in"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="-280dp"
+            android:text="Not confirned"/>
+
+        <TextView
+            android:id="@+id/Order_Confirm_in"
+            android:layout_marginTop="70dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="-130dp"
+            android:text="Not confirmed"/>
+
+        <TextView
+            android:id="@+id/Order_delivery_in"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="80dp"
+            android:text="Not Delivered"/>
+
+        <ImageView
+            android:id="@+id/Order_status_in"
+            android:layout_marginTop="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/red"
+            android:textSize="20dp"
+            android:layout_marginLeft="-40dp" />
+
+        <TextView
+            android:id="@+id/Order_Total_in"
+            android:layout_marginTop="70dp"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:layout_marginLeft="-110dp"
+            android:text="Rs:1500.00"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/inquiry_name"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Inquiry Notice"/>
+    <EditText
+        android:id="@+id/inquiry_TO"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="To" />
+
+    <EditText
+        android:id="@+id/inquiry_message"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Inquiry" />
+
+    <Button
+        android:id="@+id/inquiry_button"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="SendMail"
+        android:text="send" />
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".CheckItemsOrder">
+    <LinearLayout
+        android:id="@+id/order_specific_item"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/Order_name_chk"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Order Name"/>
+
+        <TextView
+            android:id="@+id/supplier_name_chk"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="-280dp"
+            android:text="Not confirned"/>
+
+        <TextView
+            android:id="@+id/Order_Confirm_chk"
+            android:layout_marginTop="70dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="-130dp"
+            android:text="Not confirmed"/>
+
+        <TextView
+            android:id="@+id/Order_delivery_chk"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="80dp"
+            android:text="Not Delivered"/>
+
+        <ImageView
+            android:id="@+id/Order_status_chk"
+            android:layout_marginTop="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/red"
+            android:textSize="20dp"
+            android:layout_marginLeft="-40dp" />
+
+        <TextView
+            android:id="@+id/Order_Total_chk"
+            android:layout_marginTop="70dp"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:layout_marginLeft="-110dp"
+            android:text="Rs:1500.00"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="694dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/search_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Items"
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/searchItems_chk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/search_item"
+                android:layout_margin="5dp"
+                android:background="@drawable/search"
+                android:drawableStart="@drawable/search_img"
+                android:hint="Search"
+                android:padding="15dp" />
+
+            <ScrollView
+                android:id="@+id/layer10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searchItems_chk"
+                android:layout_marginTop="17dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/card_recycleView_check_items_chk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </ScrollView>
+            <Button
+                android:id="@+id/confirm_Order"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/layer10"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Confirm Order" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
