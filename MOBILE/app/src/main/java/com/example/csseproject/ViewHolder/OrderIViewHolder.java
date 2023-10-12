@@ -54,17 +54,17 @@ public class OrderIViewHolder extends RecyclerView.Adapter<OrderIViewHolder.Orde
         String confirmed=order.getConfirmation();
         String supplierId=order.getSupplierId();
 
-        if(status.equals("Accepted")){
+        if("Accepted".equals(status)){
             holder.imageView_order.setImageResource(R.drawable.green);
-        }else if(status.equals("Declined")) {
+        }else if("Declined".equals(status)) {
             holder.imageView_order.setImageResource(R.drawable.red);
-        }else if(status.equals("Pending")) {
+        }else if("Pending".equals(status)) {
             holder.imageView_order.setImageResource(R.drawable.orange);
         }
-        if(deliveryStatus.equals("delivered") || deliveryStatus.equals("Delivered")){
+        if("delivered".equals(deliveryStatus) || "Delivered".equals(deliveryStatus)){
             holder.txtOrderDelivery.setText("Delivered");
             holder.txtOrderDelivery.setTextColor(context.getResources().getColor(android.R.color.holo_green_dark));
-        }else if(deliveryStatus.equals("not delivered")||deliveryStatus.equals("Not Delivered")) {
+        }else if("not delivered".equals(deliveryStatus)||"Not Delivered".equals(deliveryStatus)) {
             holder.txtOrderDelivery.setText("Not Delivered");
             holder.txtOrderDelivery.setTextColor(context.getResources().getColor(android.R.color.holo_red_light));
         }
