@@ -77,17 +77,17 @@ public class CheckItemsOrder extends AppCompatActivity{
         recyclerView=findViewById(R.id.card_recycleView_check_items_chk);
         ConfirmButton=findViewById(R.id.confirm_Order);
 
-        if(status.equals("Approved")){
+        if("Approved".equals(status)){
             imageView.setImageResource(R.drawable.green);
-        }else if(status.equals("Decline")) {
+        }else if("Decline".equals(status)) {
             imageView.setImageResource(R.drawable.red);
-        }else if(status.equals("Pending")) {
+        }else if("Pending".equals(status)) {
             imageView.setImageResource(R.drawable.orange);
         }
-        if(delivery.equals("delivered") || delivery.equals("Delivered")){
+        if("delivered".equals(delivery) || "Delivered".equals(delivery)){
             deli.setText("Delivered");
             deli.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
-        }else if(delivery.equals("not delivered")||delivery.equals("Not Delivered")) {
+        }else if("not delivered".equals(delivery)||"Not Delivered".equals(delivery)) {
             deli.setText("Not Delivered");
             deli.setTextColor(getResources().getColor(android.R.color.holo_red_light));
         }

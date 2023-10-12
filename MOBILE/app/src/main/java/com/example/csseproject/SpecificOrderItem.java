@@ -44,17 +44,17 @@ public class SpecificOrderItem extends AppCompatActivity {
         btn1=findViewById(R.id.btn_view_order_items);
         btn2=findViewById(R.id.btn_inquiry);
 
-        if(status.equals("Accepted")){
+        if("Accepted".equals(status)){
             imageView.setImageResource(R.drawable.green);
-        }else if(status.equals("Declined")) {
+        }else if("Declined".equals(status)) {
             imageView.setImageResource(R.drawable.red);
-        }else if(status.equals("Pending")) {
+        }else if("Pending".equals(status)) {
             imageView.setImageResource(R.drawable.orange);
         }
-        if(delivery.equals("delivered") || delivery.equals("Delivered")){
+        if("delivered".equals(delivery) || "Delivered".equals(delivery)){
             deli.setText("Delivered");
             deli.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
-        }else if(delivery.equals("not delivered")||delivery.equals("Not Delivered")) {
+        }else if("not delivered".equals(delivery)||"Not Delivered".equals(delivery)) {
             deli.setText("Not Delivered");
             deli.setTextColor(getResources().getColor(android.R.color.holo_red_light));
         }
